@@ -1,6 +1,6 @@
 package com.yh;
 
-import com.yh.interfaces.Microservice;
+import com.yh.interfaces.Routable;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +13,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class BusRoutesTest {
     @Autowired
-    Microservice microservice;
+    Routable routable;
 
     @Test
     public void doBusReturn(){
-        microservice.doBus();
+        routable.isDirectRoute();
     }
 
     @Test

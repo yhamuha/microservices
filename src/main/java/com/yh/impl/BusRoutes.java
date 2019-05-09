@@ -1,12 +1,14 @@
 package com.yh.impl;
 
-import com.yh.interfaces.Microservice;
+import com.yh.interfaces.Routable;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BusRoutes implements Microservice {
+public class BusRoutes implements Routable {
     @Override
-    public void doBus() {
-        System.out.println("BusRoute algorythm will started here");
+    public boolean isDirectRoute() {
+
+        return false;
     }
+
 }

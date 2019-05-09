@@ -1,6 +1,6 @@
 package com.yh;
 
-import com.yh.interfaces.Microservice;
+import com.yh.interfaces.Routable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @SpringBootApplication
 public class Main {
     @Autowired
-    Microservice microservice;
+    Routable routable;
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
@@ -24,7 +24,7 @@ public class Main {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext context) {
         return args -> {
-            microservice.doBus();
+            routable.isDirectRoute();
         };
     }
 }
