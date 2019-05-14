@@ -17,7 +17,7 @@ public class BusRoutesTest {
 
     @Test
     public void doBusReturn(){
-        routable.isDirectRoute();
+        //routable.isRouteDirect();
     }
 
     @Test
