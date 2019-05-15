@@ -1,6 +1,8 @@
 package com.yh.interfaces;
 
+import java.util.List;
+
 public interface Routable {
-    boolean isRouteDirect(int[] line, int dep_sid, int arr_sid);
-    int[] toInt(String str);
+    void addBusRoute(List<Integer> route);
+    boolean isDirectBusRouteExists(Integer departureStationId, Integer arrivalStationId);
 }
