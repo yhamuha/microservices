@@ -1,6 +1,8 @@
 package com.yh;
 
+import com.amazonaws.services.s3.AmazonS3;
 import com.yh.impl.RoutesService;
+import com.yh.interfaces.AmazonS3Service;
 import com.yh.interfaces.Routable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -21,10 +23,11 @@ import java.util.List;
 public class Main {
     @Autowired
     Routable routable;
+    @Autowired
+    AmazonS3Service awsService;
 
     public static void main(String[] args) throws IOException {
         SpringApplication.run(Main.class, args);
-
     }
 
     @Bean
@@ -42,6 +45,9 @@ public class Main {
             list.add(16);
             rs.addBusRoute(list);
             System.out.println(rs.isDirectBusRouteExists(3,6));
+
+            awsService.awsS3();
+
 
         };
     }
