@@ -15,6 +15,8 @@ public class RoutesService implements Routable  {
         //<stationId, [buses]>
         private final Map<Integer, Set<Integer>> busesByStation = new HashMap<>();
     /**
+     * Method provide adding bus route
+     *
      * @param route The first integer represents the bus route id.
      *              The bus route id is unique among all other bus route ids in the input.
      *              The remaining integers in the list represent a list of station ids.
