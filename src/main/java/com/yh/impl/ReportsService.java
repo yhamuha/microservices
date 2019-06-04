@@ -15,7 +15,7 @@ public class ReportsService {
     */
 
 //    declaring a file name
-     private static final String SAMPLE_CSV_FILE = "./sample.csv";
+     private static final String SAMPLE_CSV_FILE = "c:/temp/sample.csv";
 
     /**
      * Receive necessaries data and create report

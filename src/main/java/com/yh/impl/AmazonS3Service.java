@@ -40,7 +40,7 @@ public class AmazonS3Service implements AmazonS3Services {
                 .build();
 
         /*Creating a bucket*/
-        String bucketName = "RoutesService-bucket";
+        String bucketName = "new";
 
 //        if(s3client.doesBucketExistV2(bucketName)) {
 //            System.out.println("Bucket name is not available."
